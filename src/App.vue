@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-    <router-view></router-view>
-    <ul class="foot-bar">
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
+    <router-view name="footer-bar"></router-view>
+    <!-- <ul class="foot-bar">
       <li class="foot-bar-item">
         <router-link to="/">首页</router-link>
       </li>
@@ -14,23 +17,14 @@
       <li class="foot-bar-item">
         <router-link to="/profile">我的</router-link>
       </li>
-    </ul>
+    </ul> -->
   </div>
 </template>
+<script>
 
+export default {
+}
+</script>
 
 <style lang="scss">
-.foot-bar{
-  display: flex; 
-  background: #eee;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 1rem;
-  line-height: 1rem;
-  &-item{
-    flex-grow: 1;
-    text-align: center;
-  }
-}
 </style>
